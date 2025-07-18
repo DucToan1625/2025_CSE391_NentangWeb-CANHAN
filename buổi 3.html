@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thêm Sinh Viên</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 20px;
+    }
+    title {
+      background-color: red;
+      color: white;
+    }
+    .form-container, .table-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    input[type="text"], input[type="email"], input[type="date"], input[type="tel"], select, textarea {
+      width: calc(100% - 22px);
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    
+    input[type="text"]:focus, input[type="email"]:focus, input[type="date"]:focus, input[type="tel"]:focus, select:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+    .required {
+      color: red;
+    }
+    
+
+    button {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+
+      
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #f2f2f2;
+      color: #333;
+    }
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+
+  </style>
+  
+<body>
+  <div class="form-container">
+    <h2>Thêm Sinh Viên</h2>
+    <form id="student-form" autocomplete="off">
+      <div class="form-group">
+        <label for="student-id">Mã sinh viên <span class="required">*</span></label>
+        <input type="text" id="student-id" name="student-id" required>
+      </div>
+      <div class="form-group">
+        <label for="fullname">Họ và tên <span class="required">*</span></label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="dob">Ngày sinh</label>
+        <input type="date" id="dob" name="dob">
+      </div>
+      <div class="form-group">
+        <label>Giới tính</label>
+        <div class="gender-group">
+          <label>
+            <input type="radio" name="gender" value="Nam"> Nam
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Nữ"> Nữ
+          </label>
+          <label>
+            <input type="radio" name="gender" value="Khác"> Khác
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="note">Ghi chú</label>
+        <textarea id="note" name="note" placeholder="Nhập ghi chú (nếu có)"></textarea>
+      </div>
+      <button type="submit">Thêm sinh viên</button>
+    </form>
+  </div>
+  </body>
+  <body>
+  <div class="table-container">
+    <h2>Danh Sách Sinh Viên</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>STT</th>
+          <th>Mã SV</th>
+          <th>Họ tên</th>
+          <th>Email</th>
+          <th>Giới tính</th>
+          <th>Ngày sinh</th>
+          <th>Thao tác</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>SV001</td>
+          <td>Nguyễn Văn A</td>
+          <td>nguyenvana@gmail.com</td>
+          <td>Nam</td>
+          <td>2002-01-15</td>
+          
+          <td>
+             <button class="action-link">Sửa</button>
+            <button class="action-link">Xoá</button>
+          </td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>SV002</td>
+          <td>Trần Thị B</td>
+          <td>tranthib@gmail.com</td>
+          <td>Nữ</td>
+          <td>2003-03-20</td>
+          
+          <td>
+            <button class="action-link">Sửa</button>
+            <button class="action-link">Xoá</button>
+          </td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>SV003</td>
+          <td>Lê Văn C</td>
+          <td>levanc@gmail.com</td>
+          <td>Nam</td>
+          <td>2001-09-05</td>
+          
+          <td>
+            <button class="action-link">Sửa</button>
+            <button class="action-link">Xoá</button>
+          </td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
